@@ -1,38 +1,33 @@
 import React from 'react';
-import desk from '../assets/freelancer.png';
+import Typewriter from 'typewriter-effect';
+import { Link } from 'react-router-dom';
 
 export default function MainSection() {
   return (
-    <div className="flex justify-between items-center px-16 py-20 bg-[#1dbf73]">
-      <div className="w-full max-w-[50%]">
-        <h1 className="mb-4 text-white font-semibold text-3xl">
-          Find the right <i>freelance</i> <br /> service, right away
-        </h1>
-        <input
-          type="text"
-          className="w-[65%] my-4 px-3 py-1.5 rounded-l"
-          placeholder="Search for any service..."
+    <div className="container flex flex-col justify-center items-center px-16 py-20 ">
+      <h1 class="py-4 text-center text-8xl font-bold bg-gradient-to-r  from-[#6549D5] via-[#E33FA1] to-[#FB5343] inline-block text-transparent bg-clip-text">
+        Unique Digital <br />{' '}
+        <Typewriter
+          options={{
+            cursorClassName: 'text-[#FB5343] font-thin',
+            wrapperClassName:
+              'py-4 text-center text-8xl font-bold bg-gradient-to-r  from-[#6549D5] via-[#E33FA1] to-[#FB5343] inline-block text-transparent bg-clip-text',
+          }}
+          onInit={(typewriter) => {
+            typewriter.typeString(`Consultation`).start();
+          }}
         />
-        <button className="py-1.5 px-3  bg-[#222325] rounded-r">
-          <div className="">
-            <i className="fa-solid fa-magnifying-glass text-white font-bold"></i>
-          </div>
-        </button>
-        <div>
-          <p className="text-white font-semibold text-xl">
-            Need help finidng out what your business needs?
-          </p>
-          <div className="flex items-center my-2">
-            <p className="text-white font-semibold text-xl">We can help you</p>
-            <button className="mx-4 p-2 font-semibold text-white bg-[#222325] rounded">
-              Consultation ✨
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="max-w-[50%]">
-        <img className="w-[70%] m-auto" src={desk} alt="" srcset="" />
-      </div>
+      </h1>
+
+      <p className="mb-4 text-2xl text-gray-600">
+        Improve your business by utilizing ICT
+      </p>
+      <Link
+        to={`consultation`}
+        className="p-4 rounded-full text-xl font-semibold text-white bg-gradient-to-r from-[#FB5343] via-[#E33FA1] to-[#059DFF] hover:shadow-lg "
+      >
+        Start Your Journey ✨
+      </Link>
     </div>
   );
 }
