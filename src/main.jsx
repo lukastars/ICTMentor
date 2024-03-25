@@ -9,6 +9,7 @@ import Signup from './routes/signup.jsx';
 import Login from './routes/login';
 import Consultation from './routes/consultation';
 import Blog from './routes/blog';
+import BlogPage from './routes/blogPage';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: '/blog',
     element: <Blog />,
+  },
+  {
+    path: '/blog/:blogId',
+    element: <BlogPage />,
   },
 ]);
 

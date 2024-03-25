@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import ecommerce from '../assets/ecommerce.jpg';
+import digitalMarketing from '../assets/digital-marketing.png';
+import ICTTools from '../assets/ICT-tools-for-small-businesses.png';
+import Cybersecurity from '../assets/cybersecurity-basics.jpg';
+import automatingTasks from '../assets/Automating-Tasks-with-ICT.jpg';
 
 export default function BlogMainSection() {
   return (
@@ -11,7 +15,10 @@ export default function BlogMainSection() {
       </p>
 
       <div className="grid gap-4 grid-cols-3">
-        <div className="mx-3 flex flex-col bg-[#f5f8fa] rounded-xl">
+        <Link
+          to={`/blog/test`}
+          className="mx-3 flex flex-col justify-between bg-[#f5f8fa] rounded-xl"
+        >
           <img
             className="rounded-t-xl mx-auto "
             src={ecommerce}
@@ -20,29 +27,80 @@ export default function BlogMainSection() {
           />
           <div className="p-4">
             <p className="text-lg font-semibold my-2">
-              How can E-Commerce help your businesss?
+              How Can E-Commerce Help Your Businesss?
             </p>
           </div>
-        </div>
+        </Link>
 
-        {[...Array(5)].map((i, index) => (
-          <div
-            key={index}
-            className="mx-3 flex flex-col bg-[#f5f8fa] rounded-xl"
-          >
+        <Link
+          to={`/blog/test`}
+          className="mx-3 flex justify-between flex-col bg-[#f5f8fa] rounded-xl"
+        >
+          <div>
             <img
               className="rounded-t-xl mx-auto "
-              src={ecommerce}
+              src={digitalMarketing}
               alt=""
               srcset=""
             />
-            <div className="p-4">
-              <p className="text-lg font-semibold my-2">
-                How can E-Commerce help your businesss?
-              </p>
-            </div>
           </div>
-        ))}
+          <div className="p-4">
+            <p className="text-lg font-semibold my-2">
+              Digital Marketing Strategies: Reaching Your Target Audience Online
+            </p>
+          </div>
+        </Link>
+
+        <Link
+          to={`/blog/test`}
+          className="mx-3 flex justify-between flex-col bg-[#f5f8fa] rounded-xl"
+        >
+          <img
+            className="rounded-t-xl mx-auto "
+            src={ICTTools}
+            alt=""
+            srcset=""
+          />
+          <div className="p-4">
+            <p className="text-lg font-semibold my-2">
+              Getting Started with ICT: Essential Tools for Small Business
+              Success
+            </p>
+          </div>
+        </Link>
+        <Link
+          to={`/blog/test`}
+          className="mx-3 flex justify-between flex-col bg-[#f5f8fa] rounded-xl"
+        >
+          <img
+            className="rounded-t-xl mx-auto "
+            src={Cybersecurity}
+            alt=""
+            srcset=""
+          />
+          <div className="p-4">
+            <p className="text-lg font-semibold my-2">
+              Cybersecurity Basics: Protecting Your Business in the Digital Age
+            </p>
+          </div>
+        </Link>
+        <Link
+          to={`/blog/test`}
+          className="mx-3 flex justify-between flex-col bg-[#f5f8fa] rounded-xl"
+        >
+          <img
+            className="rounded-t-xl mx-auto "
+            src={automatingTasks}
+            alt=""
+            srcset=""
+          />
+          <div className="p-4">
+            <p className="text-lg font-semibold my-2">
+              Boosting Efficiency: Automating Tasks with ICT Solutions for Small
+              Businesses
+            </p>
+          </div>
+        </Link>
       </div>
     </div>
   );
