@@ -3,13 +3,13 @@ import '../App.css';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import SessionBooking from '../components/SessionBooking';
+import ServicesMainSection from '../components/servicesMainSection';
 
-export default function Consultation() {
+export default function Services() {
   return (
     <>
       <Header />
-      <SessionBooking />
+      <ServicesMainSection />
       <Footer />
     </>
   );

@@ -16,7 +16,7 @@ export default function BlogMainSection() {
 
       <div className="grid gap-4 grid-cols-3">
         <Link
-          to={`/blog/test`}
+          to={`/blog/how-can-ecommerce-help-your-businesss`}
           className="mx-3 flex flex-col justify-between bg-[#f5f8fa] rounded-xl"
         >
           <img
@@ -33,7 +33,7 @@ export default function BlogMainSection() {
         </Link>
 
         <Link
-          to={`/blog/test`}
+          to={`/blog/digital-marketing-strategies-reaching-your-target-audienceOnline`}
           className="mx-3 flex justify-between flex-col bg-[#f5f8fa] rounded-xl"
         >
           <div>
@@ -52,7 +52,7 @@ export default function BlogMainSection() {
         </Link>
 
         <Link
-          to={`/blog/test`}
+          to={`/blog/essential-ICT-tools-for-small-business-success`}
           className="mx-3 flex justify-between flex-col bg-[#f5f8fa] rounded-xl"
         >
           <img
@@ -69,7 +69,7 @@ export default function BlogMainSection() {
           </div>
         </Link>
         <Link
-          to={`/blog/test`}
+          to={`/blog/cybersecurity-basics-protecting-your-business-in-the-digital-age`}
           className="mx-3 flex justify-between flex-col bg-[#f5f8fa] rounded-xl"
         >
           <img
@@ -85,7 +85,7 @@ export default function BlogMainSection() {
           </div>
         </Link>
         <Link
-          to={`/blog/test`}
+          to={`/blog/boosting-efficiency-automating-tasks-with-ICT-solutions-for-small-businesses`}
           className="mx-3 flex justify-between flex-col bg-[#f5f8fa] rounded-xl"
         >
           <img

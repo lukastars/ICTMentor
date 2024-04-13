@@ -7,9 +7,11 @@ import Root from './routes/root';
 import Explore from './routes/explore';
 import Signup from './routes/signup.jsx';
 import Login from './routes/login';
-import Consultation from './routes/consultation';
+import Services from './routes/services';
 import Blog from './routes/blog';
 import BlogPage from './routes/blogPage';
+import Consultation from './routes/consultation';
+import AI from './routes/ai';
 
 const router = createBrowserRouter([
   {
@@ -29,8 +31,8 @@ const router = createBrowserRouter([
     element: <Explore />,
   },
   {
-    path: '/consultation',
-    element: <Consultation />,
+    path: '/services',
+    element: <Services />,
   },
   {
     path: '/blog',
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
   {
     path: '/blog/:blogId',
     element: <BlogPage />,
+  },
+  {
+    path: '/consultation',
+    element: <Consultation />,
+  },
+  {
+    path: '/ai',
+    element: <AI />,
   },
 ]);
 

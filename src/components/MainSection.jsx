@@ -23,7 +23,7 @@ export default function MainSection() {
         Improve your business by utilizing ICT
       </p>
       <Link
-        to={`consultation`}
+        to={`services`}
         className="p-4 rounded-full text-xl font-semibold text-white bg-gradient-to-r from-[#FB5343] via-[#E33FA1] to-[#059DFF] hover:shadow-lg "
       >
         Start Your Journey ✨
