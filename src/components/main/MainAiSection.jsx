@@ -1,7 +1,10 @@
-import { useContext } from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
 import { assets } from '../../assets/ai_assets/assets';
 import './main.css';
 import { Context } from '../../context/Context';
+
+import Markdown from 'marked-react';
+
 const Main = () => {
   const {
     onSent,
@@ -16,62 +19,35 @@ const Main = () => {
   const handleCardClick = (promptText) => {
     setInput(promptText);
   };
+
+  // Create a ref for the result div
+  const resultRef = useRef(null);
+
+  useEffect(() => {
+    // Scroll to bottom when result changes
+    if (resultRef.current) {
+      resultRef.current.scrollTop = resultRef.current.scrollHeight;
+    }
+  }, [resultData]); // Update only when resultData changes
+
   return (
     <div className="main">
       <div className="main-container">
         {!showResults ? (
           <>
-            <div className="greet">
+            <div className="greet ">
               <p>
                 <span>Hello, </span>
               </p>
-              <p>How Can I Help You Today?</p>
+              <p className="text-4xl">
+                Please type what kind of business you have. <br /> E.g. "Pizza
+                restaurant"
+              </p>
             </div>
-            {/* <div className="cards">
-              <div
-                className="card"
-                onClick={() =>
-                  handleCardClick('Suggest Some Place To Visit In Kerala')
-                }
-              >
-                <p>Suggest Some Place To Visit In Kerala </p>
-                <img src={assets.compass_icon} alt="" />
-              </div>
-              <div
-                className="card"
-                onClick={() =>
-                  handleCardClick(
-                    'Brainstorm team bonding activities for our work retreat'
-                  )
-                }
-              >
-                <p>Brainstorm team bonding activities for our work retreat </p>
-                <img src={assets.message_icon} alt="" />
-              </div>
-              <div
-                className="card"
-                onClick={() =>
-                  handleCardClick('How to Create a Gyroscope using Disc?')
-                }
-              >
-                <p>How to Create a Gyroscope using Disc?</p>
-                <img src={assets.bulb_icon} alt="" />
-              </div>
-              <div
-                className="card"
-                onClick={() => {
-                  handleCardClick(
-                    'Create a Script for the youtube video about coding '
-                  );
-                }}
-              >
-                <p>Create a Script for the youtube video about coding </p>
-                <img src={assets.code_icon} alt="" />
-              </div>
-            </div> */}
+            {/* ... your cards section if needed */}
           </>
         ) : (
-          <div className="result">
+          <div className="result" ref={resultRef}>
             <div className="result-title">
               <img src={assets.user} alt="" />
               <p>{recentPrompt}</p>

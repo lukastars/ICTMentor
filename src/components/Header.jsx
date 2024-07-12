@@ -11,12 +11,12 @@ export default function Header() {
           ICTMentor
         </Link>
         <div className="text-gray-400">
-          <Link
+          {/* <Link
             to={`/explore`}
             className="px-2 mx-2 font-bold hover:text-[#059DFF] "
           >
             Explore
-          </Link>
+          </Link> */}
           <Link
             to={`/sign-up`}
             className="px-2 mx-2 font-bold hover:text-[#059DFF]"
@@ -29,12 +29,12 @@ export default function Header() {
           >
             Log In
           </Link>
-          <Link
+          {/* <Link
             to={`/sign-up`}
             className="px-2 mx-2 font-bold hover:text-[#059DFF]"
           >
             Find a Freelancer 🔎
-          </Link>
+          </Link> */}
         </div>
       </div>
     </header>

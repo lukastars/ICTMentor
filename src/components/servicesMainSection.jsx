@@ -30,7 +30,7 @@ export default function Services() {
           to={`/blog`}
           className="w-1/3 p-7 mx-3 flex flex-col bg-[#f5f8fa]  rounded-xl shadow-lg"
         >
-          <p className="text-lg font-semibold mb-2">Articles</p>
+          <p className="text-lg font-semibold mb-2">Resources Library</p>
           <p className="mb-4 text-gray-600">
             Read our articals written by ict experts to increase your knowledge
             about ICT utilization.

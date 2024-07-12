@@ -11,7 +11,7 @@ export default function BlogMainSection() {
   return (
     <div className="container flex flex-col justify-center items-center px-16 py-20 ">
       <p className="p-4 mb-4 text-5xl font-semibold bg-gradient-to-r  from-[#6549D5] via-[#E33FA1] to-[#FB5343] inline-block text-transparent bg-clip-text">
-        Blog
+        Resources Library
       </p>
 
       <div className="grid gap-4 grid-cols-3">
